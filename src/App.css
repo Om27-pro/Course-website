@@ -1,0 +1,71 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fefefe;
+  color: #222;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Hero Banner */
+.hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 60px 20px;
+}
+
+/* Buttons */
+.btn-warning {
+  background-color: #f59e0b;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #d97706;
+  color: white;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Section spacing */
+section {
+  padding: 60px 0;
+}
+
+/* Testimonial carousel image */
+.carousel .carousel-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Responsive Image */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
