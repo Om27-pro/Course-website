@@ -1,8 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders AERA Gas Control Systems heading', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headingElement = screen.getByRole('heading', { level: 1, name: /AERA Gas Control Systems Pvt. Ltd./i });
+  expect(headingElement).toBeInTheDocument();
+});
+
+test('renders View Our Products button', () => {
+  render(<App />);
+  const buttonElement = screen.getByText(/View Our Products/i);
+  expect(buttonElement).toBeInTheDocument();
 });
