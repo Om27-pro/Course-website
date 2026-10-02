@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+# Om Solanki — AI Platform Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A futuristic, AI-platform-themed personal portfolio website for **Om Solanki** (Full Stack Developer & AI Automation Engineer), built with Next.js 14 App Router, TypeScript, Tailwind CSS, Three.js, Framer Motion, and Lenis smooth scroll.
 
-## Available Scripts
+The website is styled like an advanced AI platform interface / neural command center ("OM_OS"), featuring local LLM simulation, interactive 3D particle background, live n8n workflow diagram visualizer, command palette (Cmd+K), and a client-side Ask Om AI assistant.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🛠️ Tech Stack & Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Framework**: Next.js 14+ (App Router) with TypeScript
+- **Styling**: Tailwind CSS, CSS variables, Glassmorphism, Cyberpunk/Neon glow design system
+- **Animations**: Framer Motion, Lenis Smooth Scroll, Custom CSS scanlines & glowing cursor
+- **3D Graphics**: Three.js, React Three Fiber, Custom GLSL shaders
+- **Icons & Fonts**: Lucide React, Space Grotesk, Inter, JetBrains Mono
+- **Key Modules**:
+  - **Boot Sequence**: 2-3s terminal boot loader with progress bar, session memory & skip button
+  - **3D Neural Field**: Interactive particle network background with mouse & scroll reactivity
+  - **Command Palette (`⌘K` / `Ctrl+K`)**: Rapid navigation & quick launch overlay
+  - **Ask Om AI Assistant**: Floating LLM chat widget powered by structured dataset in `data/portfolio.ts`
+  - **n8n Workflow Visualizer**: Interactive messaging automation pipeline diagram with packet execution replay
+  - **AI Lab**: Simulated local Ollama/Llama 3.2 streaming console and GenAI tool showcases
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- Node.js 18.x or higher
+- npm / yarn / pnpm
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+```bash
+git clone https://github.com/Om27-pro/om-solanki-ai-portfolio.git
+cd om-solanki-ai-portfolio
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-### `npm run eject`
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📂 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+.
+├── app/
+│   ├── globals.css           # Design tokens, neon glow, custom scrollbars, scanlines
+│   ├── layout.tsx            # Metadata, JSON-LD schema, fonts & skip link
+│   ├── page.tsx              # Main system interface composition
+│   ├── robots.ts             # Robots SEO route
+│   └── sitemap.ts            # Sitemap SEO route
+├── components/
+│   ├── ai/
+│   │   └── AIAssistantWidget.tsx  # Ask Om AI chat widget
+│   ├── sections/
+│   │   ├── AboutSection.tsx       # Profile.model AI model card
+│   │   ├── AILabSection.tsx       # Local Ollama terminal stream & AI tools
+│   │   ├── ContactSection.tsx     # Open Channel form & terminal direct commands
+│   │   ├── EducationAchievementsSection.tsx  # Training Data & Benchmarks
+│   │   ├── ExperienceSection.tsx  # System Logs vertical timeline
+│   │   ├── HeroSection.tsx        # System Online glitch heading & 3D Orb
+│   │   ├── N8nWorkflowVisualizer.tsx # Interactive n8n pipeline visualizer
+│   │   ├── ProjectsSection.tsx    # Deployed Models & inspector modal
+│   │   └── SkillsSection.tsx      # Neural Skill Graph
+│   ├── three/
+│   │   ├── AICoreOrb.tsx          # 3D interactive wireframe orb
+│   │   └── NeuralBackground.tsx   # 3D R3F particle background
+│   └── ui/
+│       ├── BootSequence.tsx       # Terminal boot screen
+│       ├── CommandPalette.tsx     # Cmd+K command palette
+│       ├── CustomCursor.tsx       # Custom glowing particle cursor
+│       ├── Navbar.tsx             # Floating command navbar
+│       ├── ScrollProgressBar.tsx  # Data pipeline scroll bar
+│       └── SmoothScroll.tsx       # Lenis smooth scroll wrapper
+├── data/
+│   └── portfolio.ts           # Single typed data file with all Om Solanki profile information
+├── lib/
+│   └── ai-service.ts          # Isolated AI query logic (easily swappable for real LLM API)
+└── public/
+    └── Om_Solanki_Resume.pdf  # Resume download target
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠️ Customization & Updating Content
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+All personal resume data, skills, projects, work experience, and contact details are central to `data/portfolio.ts`.
+To update content, edit `data/portfolio.ts` directly.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To plug in a live backend LLM endpoint (e.g. OpenAI / Claude / Ollama backend API):
+Replace the implementation in `lib/ai-service.ts`:
+```ts
+export async function queryOmAI(userPrompt: string): Promise<string> {
+  const response = await fetch('/api/chat', {
+    method: 'POST',
+    body: JSON.stringify({ prompt: userPrompt })
+  });
+  const data = await response.json();
+  return data.reply;
+}
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Deployment (Vercel)
 
-### Analyzing the Bundle Size
+This application is ready for 1-click zero-config deployment on Vercel:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Push your repository to GitHub.
+2. Import project in [Vercel Dashboard](https://vercel.com).
+3. Framework Preset: **Next.js**.
+4. Click **Deploy**.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📄 License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built for Om Solanki.
