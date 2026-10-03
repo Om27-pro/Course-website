@@ -1,8 +1,16 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Home from './pages/Home';
+import { BrowserRouter } from 'react-router-dom';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders Home hero headline and CTA', () => {
+  render(
+    <BrowserRouter>
+      <Home />
+    </BrowserRouter>
+  );
+  const headline = screen.getByText(/Drive Your/i);
+  expect(headline).toBeInTheDocument();
+
+  const ctaButton = screen.getByText(/Explore Cars/i);
+  expect(ctaButton).toBeInTheDocument();
 });

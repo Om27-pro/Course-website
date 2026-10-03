@@ -1,31 +1,35 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import 'aos/dist/aos.css';
-import AOS from 'aos';
 
-// Pages and Components
-import NavbarComponent from './components/NavbarComponent';
+// Layout Components
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+
+// Pages
 import Home from './pages/Home';
-import CrashCourse from './pages/CrashCourse';
-import CoursePage from './pages/CoursePage';
-import Register from './pages/Register'; 
+import Cars from './pages/Cars';
+import CarDetails from './pages/CarDetails';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
-  useEffect(() => {
-    AOS.init({ duration: 800, once: true });
-  }, []);
-
   return (
     <Router>
-      <NavbarComponent />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/crash-course" element={<CrashCourse />} />
-        <Route path="/course/:id" element={<CoursePage />} />
-        <Route path="/register" element={<Register />} /> {/* ✅ Register Route */}
-      </Routes>
+      <ScrollToTop />
+      <div className="flex flex-col min-h-screen bg-[#111111] text-white selection:bg-accent selection:text-white">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cars" element={<Cars />} />
+            <Route path="/cars/:id" element={<CarDetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }
