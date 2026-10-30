@@ -1,0 +1,50 @@
+npm warn exec The following package was not found and will be installed: serve@14.2.6
+ INFO  Accepting connections at http://localhost:3000
+ HTTP  10/30/2026 4:08:09 PM ::1 GET /
+ HTTP  10/30/2026 4:08:09 PM ::1 Returned 200 in 254 ms
+ HTTP  10/30/2026 4:08:09 PM ::1 GET /static/js/main.cc020b35.js
+ HTTP  10/30/2026 4:08:09 PM ::1 GET /static/css/main.2c8bf779.css
+ HTTP  10/30/2026 4:08:09 PM ::1 Returned 200 in 6 ms
+ HTTP  10/30/2026 4:08:09 PM ::1 Returned 200 in 9 ms
+ HTTP  10/30/2026 4:08:13 PM ::1 GET /static/media/banner.04dd5c7a6e39923f4f67.jpg
+ HTTP  10/30/2026 4:08:13 PM ::1 GET /static/media/whychoose.6f75a076dfb2e53c7d96.jpg
+ HTTP  10/30/2026 4:08:13 PM ::1 GET /static/media/image1.d932d6fa168f36e0cd65.avif
+ HTTP  10/30/2026 4:08:13 PM ::1 GET /static/media/image2.6897f150f1163a88f57e.avif
+ HTTP  10/30/2026 4:08:13 PM ::1 GET /static/media/image3.f6a8b043555413aba43f.avif
+ HTTP  10/30/2026 4:08:13 PM ::1 Returned 200 in 9 ms
+ HTTP  10/30/2026 4:08:13 PM ::1 Returned 200 in 7 ms
+ HTTP  10/30/2026 4:08:13 PM ::1 Returned 200 in 6 ms
+ HTTP  10/30/2026 4:08:13 PM ::1 Returned 200 in 16 ms
+ HTTP  10/30/2026 4:08:13 PM ::1 Returned 200 in 15 ms
+ HTTP  10/30/2026 4:08:39 PM ::1 GET /
+ HTTP  10/30/2026 4:08:39 PM ::1 Returned 200 in 2 ms
+ HTTP  10/30/2026 4:08:39 PM ::1 GET /static/js/main.cc020b35.js
+ HTTP  10/30/2026 4:08:39 PM ::1 GET /static/css/main.2c8bf779.css
+ HTTP  10/30/2026 4:08:39 PM ::1 Returned 200 in 2 ms
+ HTTP  10/30/2026 4:08:39 PM ::1 Returned 200 in 3 ms
+ HTTP  10/30/2026 4:08:42 PM ::1 GET /static/media/banner.04dd5c7a6e39923f4f67.jpg
+ HTTP  10/30/2026 4:08:42 PM ::1 GET /static/media/whychoose.6f75a076dfb2e53c7d96.jpg
+ HTTP  10/30/2026 4:08:42 PM ::1 GET /static/media/image1.d932d6fa168f36e0cd65.avif
+ HTTP  10/30/2026 4:08:42 PM ::1 GET /static/media/image2.6897f150f1163a88f57e.avif
+ HTTP  10/30/2026 4:08:42 PM ::1 GET /static/media/image3.f6a8b043555413aba43f.avif
+ HTTP  10/30/2026 4:08:42 PM ::1 Returned 200 in 2 ms
+ HTTP  10/30/2026 4:08:42 PM ::1 Returned 200 in 2 ms
+ HTTP  10/30/2026 4:08:42 PM ::1 Returned 200 in 2 ms
+ HTTP  10/30/2026 4:08:42 PM ::1 Returned 200 in 1 ms
+ HTTP  10/30/2026 4:08:42 PM ::1 Returned 200 in 2 ms
+ HTTP  10/30/2026 4:09:59 PM ::1 GET /
+ HTTP  10/30/2026 4:09:59 PM ::1 Returned 200 in 2 ms
+ HTTP  10/30/2026 4:09:59 PM ::1 GET /static/js/main.b961ab31.js
+ HTTP  10/30/2026 4:09:59 PM ::1 GET /static/css/main.2c8bf779.css
+ HTTP  10/30/2026 4:09:59 PM ::1 Returned 200 in 3 ms
+ HTTP  10/30/2026 4:09:59 PM ::1 Returned 200 in 7 ms
+ HTTP  10/30/2026 4:10:02 PM ::1 GET /static/media/banner.04dd5c7a6e39923f4f67.jpg
+ HTTP  10/30/2026 4:10:02 PM ::1 GET /static/media/whychoose.6f75a076dfb2e53c7d96.jpg
+ HTTP  10/30/2026 4:10:02 PM ::1 GET /static/media/image1.d932d6fa168f36e0cd65.avif
+ HTTP  10/30/2026 4:10:02 PM ::1 GET /static/media/image2.6897f150f1163a88f57e.avif
+ HTTP  10/30/2026 4:10:02 PM ::1 GET /static/media/image3.f6a8b043555413aba43f.avif
+ HTTP  10/30/2026 4:10:02 PM ::1 Returned 200 in 4 ms
+ HTTP  10/30/2026 4:10:02 PM ::1 Returned 200 in 5 ms
+ HTTP  10/30/2026 4:10:02 PM ::1 Returned 200 in 4 ms
+ HTTP  10/30/2026 4:10:02 PM ::1 Returned 200 in 8 ms
+ HTTP  10/30/2026 4:10:02 PM ::1 Returned 200 in 8 ms

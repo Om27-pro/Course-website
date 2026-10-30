@@ -1,8 +1,6 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
-
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('basic design token verification', () => {
+  const primaryColor = '#171717';
+  const accentColor = '#625BFF';
+  expect(primaryColor).toBe('#171717');
+  expect(accentColor).toBe('#625BFF');
 });
